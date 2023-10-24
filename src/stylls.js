@@ -1,155 +1,158 @@
 import styled from "styled-components";
 
 export const Styls = styled.div`
-font-family: "Helvetica Neue",Helvetica,Arial,"Liberation Sans",sans-serif;
-font-size: 12px;
-@media (max-width: 920px) {
-  width: 70%;
-}
-.inner{
-  margin: auto;
-  width:66%;
-  margin-top: -20px;
-  .stay{ 
-     width:60%;
-     margin-left: 80px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  height: 100vh;
+  position: relative;
+  .container {
+    width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
   }
-  .stay2{ 
-    width:70%;
+
+  .office {
+    width: 400px;
+    background: #343434;
+  }
+  .office-holder {
+    width: 80%;
     margin: auto;
-    margin-top: 20px;
-    padding-bottom: 60px;
-    display: flex;
-    justify-content: space-between;
+    padding: 20px 0px;
   }
-}
-select{
-  margin-right: 20px;
-}
-margin: auto;
-margin-top: 130px;
-padding-left: 80px;
-width: 40%;
-  .formal{
-    background:#007CC3;
-    margin: auto;
-    width: 95%;
-    color:white;
-  }
-  .labcon{
-    display: flex;
-    span{
-      margin: 13px;
-      margin-top: 12px
-    }
-  }
-  .imagee {
-    width: 200px;
-    margin: 35px;
- 
-  }
-  label {
-    font-family: "Open Sans",helvetica,arial,sans-serif;
-    font-size: 13px;
-    span {
-      font-weight: 100;
-      color: #435c72;
-    }
-  }
-
-  .newicon1 {
-    position: absolute;
-    margin-top: 20px;
-    margin-left: 15px;
-    color: #bebebe;
-  }
-
-  .navbar {
-    @media (max-width: 920px) {
-      display: none;
-    }
-    background-color: #323e4d;
-    flex: 2;
-  }
-
-  input[type="email"] {
-    font-size: 12px;
-    font-family: "Open Sans",helvetica,arial,sans-serif;
-    width: 60%;
-    height: auto;
-    padding-left: 4px;
-    font-weight: 100;
-    padding-top: 4px;
-    padding-bottom: 3px;
-    margin-top: 5px;
-    margin-bottom: 8px;
-    border: 2px solid #bebebe;
-    border-radius: 4px;
-  }
-  input[type="password"] {
-    font-size: 12px;
-    font-family: "Open Sans",helvetica,arial,sans-serif;
-    width: 60%;
-    height: auto;
-    padding-left: 4px;
-    font-weight: 100;
-    padding-top: 4px;
-    padding-bottom: 3px;
-    margin-top: 5px;
-    margin-bottom: 8px;
-    margin-left: 3px;
-    border: 2px solid #bebebe;
-    border-radius: 4px;
-  }
-
-  button {
-    font-size: 12px;
-    font-family: "Open Sans",helvetica,arial,sans-serif;
-    width: auto;
-    color: white;
-    cursor: pointer;
-    height: auto;
-    padding: 2px 0px;
+  .logo {
+    width: 100%;
     text-align: center;
-    padding: 9px; 
-    padding-top: 5px; 
-    padding-bottom: 5px; 
-    border: 1px solid white;
-    background: transparent;
-    border-radius:3px;
+    float: left;
+    margin-top: -45px;
+  }
+  .fnttss {
+    text-align: center;
+    font-size: 18px;
+    margin-top: 60px;
+  }
+  .login_logo {
+    width: 100%;
+  }
+  .logo h1 {
+    font-family: arial;
+  }
+  .verify {
+    width: 70%;
+    margin: auto;
+  }
+  .verify h4 {
+    font-family: arial;
+  }
+  fieldset {
+    width: 90%;
+    float: right;
+    border: 2px solid #4285f4;
+    border-radius: 5px;
+  }
+  .msg {
+    font-weight: 600;
+    color: red;
+  }
+  legend {
+    font-size: 15px;
+    overflow: hidden;
+    width: 42%;
+    padding: 0px 2px;
+    margin: 0px;
+  }
+  .verify input[type="text"] {
+    width: 100%;
+    float: right;
+    border: none;
+    padding: 3px 10px;
+  }
+  .verify button {
+    border: none;
+    height: 40px;
+    width: 80px;
+    float: right;
+    margin-top: 2em;
+    background: #4285f4;
+    border-radius: 5px;
+    color: #fff;
+  }
+  .email-to-verify {
+    border: 1px solid #000;
+    border-radius: 10px;
+  }
+  .form-holder {
+    width: 100%;
+    float: left;
+  }
+  .form-holder h3 {
+    font-weight: 600;
+  }
+  .form-holder input[type="email"],
+  input[type="password"] {
+    width: 100%;
+    color: white;
+    font-size: 16px;
+    height: 40px;
+    background-color: #343434;
+    border: none;
+    border-bottom: 1px solid white;
+    float: left;
+    margin-bottom: 15px;
+  }
+  .form-holder .btn-holder {
+    width: 100%;
+    margin-top: 1em;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+  }
+  .form-holder .btn-holder .btn {
+    background: rgb(4, 109, 4);
+    font-size: 15px;
+    border: none;
+    border-radius: 10px;
+    padding: 9px 10px;
+    color: #fff;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .form-holder .btn-holder .btn:hover {
+    cursor: pointer;
+  }
+  .checkbox {
+    width: 100%;
+    float: left;
+    margin-top: 5px;
+  }
+  .checkbox label {
+    font-family: arial;
+    font-size: 13px;
+    float: left;
+    margin-left: 1em;
+  }
+  .hide {
+    display: none;
+  }
+  .button-coll {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    padding: 6px;
+    background: red;
+    border: none;
+    color: white;
+  }
+  .checker {
+    margin-bottom: 60px;
   }
   .reda {
+    font-size: 12px;
     color: red;
-    margin: 5px;
   }
-  .labeltext {
-    text-align: left;
-  }
-  ul {
-    margin: auto;
-    margin-top: 100px;
-    @media (max-width: 720px) {
-      width: 85%;
-    }
-    width: 35%;
-    list-style-type: none;
-    display flex;  
-    justify-content: space-between; 
-    a{
-      font-size: 13.4px;
-      font-family: "Open Sans",helvetica,arial,sans-serif;
-      font-weight: 100;
-      color: rgb(107, 97, 97);
-      text-decoration: none;
-    }
-  }
-.smaller{
-  margin-top: 250px;
-text-align: center;
-  font-family: "Open Sans",helvetica,arial,sans-serif;
-  font-size: 11px;
-  color: rgb(107, 97, 97);
-}
 `;
